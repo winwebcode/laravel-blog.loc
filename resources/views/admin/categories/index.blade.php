@@ -1,4 +1,4 @@
-@extends('admin.layout')
+@extends('admin.layout') // include /views/admin/categories/layout.blade.php
 
 @section('content')
 
@@ -45,7 +45,10 @@
                     <tr>
                         <td>{{$category->id}}</td>
                         <td>{{$category->title}}</td>
-                        <td><a href="edit.html" class="fa fa-pencil"></a> <a href="#" class="fa fa-remove"></a></td>
+                        {{Form::open(['route'=>['categories.destroy', $category->id], 'method' => 'delete'])}}
+                        <td><a href="{{route('categories.edit', $category->id)}}" class="fa fa-pencil"></a>
+                            <button type="submit" onclick="return confirm('You sure?')" class="delete"><b class="fa fa-remove"></b></td></button>
+                        {{Form::close()}}
                     </tr>
                     @endforeach
                 </table>

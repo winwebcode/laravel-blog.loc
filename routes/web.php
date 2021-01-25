@@ -16,7 +16,13 @@ Route::get('/', function () {
 });
 
 
-Route::get('/testpage', 'TestController@testfunc'); //имя контроллера@имя метода
+//Route::get('/testpage', 'TestController@testfunc'); //имя контроллера@имя метода
 
-Route::get('/admin', 'Admin\DashboardController@index'); //имя контроллера@имя метода
-Route::resource('/admin/categories', 'Admin\CategoriesController');
+//разные варианты записи роутов
+/*Route::get('/admin', 'Admin\DashboardController@index'); //имя контроллера@имя метода
+Route::resource('/admin/categories', 'Admin\CategoriesController'); // для CRUD*/
+
+Route::group(['prefix' => 'admin', 'namespace'=> 'Admin'], function (){
+    Route::get('/', 'DashboardController@index');
+    Route::resource('/categories', 'CategoriesController');
+});

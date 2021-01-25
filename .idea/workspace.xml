@@ -20,11 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06797367-d3b1-4791-a1e8-0d936e8b41d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/categories/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/sluggable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/categories/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/errors.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/categories/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/categories/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,9 +156,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="W:\domains\laravel-blog.loc\resources\views\admin" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="W:\domains\laravel-blog.loc\app\Http\Controllers" />
     </key>
@@ -171,7 +183,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610520918938</updated>
-      <workItem from="1610520920588" duration="64311000" />
+      <workItem from="1610520920588" duration="81832000" />
     </task>
     <servers />
   </component>
@@ -197,17 +209,17 @@
       <screen x="0" y="0" width="1920" height="998" />
     </state>
     <state x="1097" y="243" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.998@0.0.1920.998" timestamp="1611138826324" />
-    <state x="1289" y="411" key="NewPhpFileDialog" timestamp="1611410663964">
+    <state x="1289" y="411" key="NewPhpFileDialog" timestamp="1611578041245">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
-    <state x="1289" y="411" key="NewPhpFileDialog/0.0.1920.998@0.0.1920.998" timestamp="1611410663964" />
+    <state x="1289" y="411" key="NewPhpFileDialog/0.0.1920.998@0.0.1920.998" timestamp="1611578041245" />
     <state x="772" y="260" key="SettingsEditor" timestamp="1610639456280">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
     <state x="772" y="260" key="SettingsEditor/0.0.1920.998@0.0.1920.998" timestamp="1610639456280" />
-    <state x="937" y="260" width="744" height="534" key="find.popup" timestamp="1611405124835">
+    <state x="937" y="260" width="744" height="534" key="find.popup" timestamp="1611415180868">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
-    <state x="937" y="260" width="744" height="534" key="find.popup/0.0.1920.998@0.0.1920.998" timestamp="1611405124835" />
+    <state x="937" y="260" width="744" height="534" key="find.popup/0.0.1920.998@0.0.1920.998" timestamp="1611415180868" />
   </component>
 </project>
