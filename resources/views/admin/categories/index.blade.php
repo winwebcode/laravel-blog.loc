@@ -1,4 +1,4 @@
-@extends('admin.layout') // include /views/admin/categories/layout.blade.php
+@extends('admin.layout') // include /views/admin/layout.blade.php
 
 @section('content')
 
@@ -23,7 +23,7 @@
         <!-- Default box -->
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Листинг сущности</h3>
+                <h3 class="box-title">Список категорий</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -45,8 +45,8 @@
                     <tr>
                         <td>{{$category->id}}</td>
                         <td>{{$category->title}}</td>
-                        {{Form::open(['route'=>['categories.destroy', $category->id], 'method' => 'delete'])}}
                         <td><a href="{{route('categories.edit', $category->id)}}" class="fa fa-pencil"></a>
+                        {{Form::open(['route'=>['categories.destroy', $category->id], 'method' => 'delete'])}}
                             <button type="submit" onclick="return confirm('You sure?')" class="delete"><b class="fa fa-remove"></b></td></button>
                         {{Form::close()}}
                     </tr>
