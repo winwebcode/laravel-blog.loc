@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email',
     ];
 
     const IS_ACTIVE = 0;
@@ -56,42 +56,58 @@ class User extends Authenticatable
     {
         $user = new static;
         $user->fill($fields);
-        $user->password = bcrypt($fields['password']);
         $user->save();
 
         return $user;
     }
 
-    public function edit()
+    public function generatePassword($password)
+    {
+        if($password != null) {
+            $this->password = bcrypt($password);
+            $this->save();
+        }
+    }
+
+    public function edit($fields)
     {
         $this->fill($fields);
-        $this->password = bcrypt($fields['password']);
         $this->save();
     }
 
     public function remove()
     {
-        Storage::delete('uploads/' . $this->image);
+        $this->removeAvatar(); //удаляем аватар если есть
         $this->delete();
     }
 
     public function uploadAvatar($image)
     {
         if ($image == null) {
+            return;
         }
-        Storage::delete('uploads/' . $this->image);
+        $this->removeAvatar(); //удаляем аватар если есть
+        //dd(get_class_methods($image));
+
         $filename = str_random(10) . '.' . $image->extension();
-        $image->saveAs('uploads', $filename); // путь относительно public
-        $this->image = $filename;
+        $image->storeAs('uploads', $filename); // путь относительно public
+        $this->avatar = $filename;
         $this->save();
+    }
+
+    public function removeAvatar()
+    {
+        if ($this->avatar != null) { //avatar поступает из метода store
+            Storage::delete('uploads/' . $this->avatar); //удаление существующего аватара если он есть
+        }
     }
 
     public function getAvatar()
     {
-        if($this->image = null) {
-            return '/img/no-user-img.png';
+        if($this->avatar == null) {
+            return '/img/no-user-img.jpg';
         } else {
-            return '/uploads/' . $this->image;
+            return '/uploads/' . $this->avatar;
         }
 
     }

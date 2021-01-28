@@ -17,7 +17,7 @@
 
         <!-- Default box -->
         <div class="box">
-            {!! Form::open(['route' => 'categories.store']) !!}
+            {{Form::open(['route' => 'categories.store'])}}
 
 
             <div class="box-header with-border">
@@ -38,7 +38,7 @@
                 <button class="btn btn-success pull-right">Добавить</button>
             </div>
             <!-- /.box-footer-->
-            {!! Form::close() !!}
+            {{Form::close()}}
         </div>
         <!-- /.box -->
 

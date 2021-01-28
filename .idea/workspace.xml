@@ -20,14 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06797367-d3b1-4791-a1e8-0d936e8b41d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TagsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/tags/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/tags/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/tags/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UsersController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_26_144444_add_avatar_column_to_users.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_28_163953_make_password_nullable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/no-user-img.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/3YBFHdq2Cc.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/Np9spZbByn.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/a6h8823DBA.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Tag.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tag.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/categories/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/categories/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/errors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/errors.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,11 +161,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="W:\domains\laravel-blog.loc\public\img" />
       <recent name="W:\domains\laravel-blog.loc\resources\views\admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -179,7 +189,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610520918938</updated>
-      <workItem from="1610520920588" duration="90319000" />
+      <workItem from="1610520920588" duration="117871000" />
     </task>
     <servers />
   </component>
@@ -201,18 +211,26 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1097" y="243" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611648403967">
+    <state x="1034" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611655059555">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
-    <state x="1097" y="243" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.998@0.0.1920.998" timestamp="1611648403967" />
-    <state x="1289" y="411" key="NewPhpFileDialog" timestamp="1611638367844">
+    <state x="1034" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.998@0.0.1920.998" timestamp="1611655059555" />
+    <state x="1039" y="458" key="#com.intellij.tools.ToolEditorDialog" timestamp="1611734810465">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
-    <state x="1289" y="411" key="NewPhpFileDialog/0.0.1920.998@0.0.1920.998" timestamp="1611638367844" />
-    <state x="772" y="260" key="SettingsEditor" timestamp="1610639456280">
+    <state x="1039" y="458" key="#com.intellij.tools.ToolEditorDialog/0.0.1920.998@0.0.1920.998" timestamp="1611734810465" />
+    <state x="1097" y="243" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611662864216">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
-    <state x="772" y="260" key="SettingsEditor/0.0.1920.998@0.0.1920.998" timestamp="1610639456280" />
+    <state x="1097" y="243" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.998@0.0.1920.998" timestamp="1611662864216" />
+    <state x="1289" y="411" key="NewPhpFileDialog" timestamp="1611655090753">
+      <screen x="0" y="0" width="1920" height="998" />
+    </state>
+    <state x="1289" y="411" key="NewPhpFileDialog/0.0.1920.998@0.0.1920.998" timestamp="1611655090753" />
+    <state x="772" y="260" key="SettingsEditor" timestamp="1611739688831">
+      <screen x="0" y="0" width="1920" height="998" />
+    </state>
+    <state x="772" y="260" key="SettingsEditor/0.0.1920.998@0.0.1920.998" timestamp="1611739688831" />
     <state x="769" y="412" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611642718649">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
@@ -221,5 +239,9 @@
       <screen x="0" y="0" width="1920" height="998" />
     </state>
     <state x="937" y="260" width="744" height="534" key="find.popup/0.0.1920.998@0.0.1920.998" timestamp="1611415180868" />
+    <state x="943" y="236" key="run.anything.popup" timestamp="1611656106394">
+      <screen x="0" y="0" width="1920" height="998" />
+    </state>
+    <state x="943" y="236" key="run.anything.popup/0.0.1920.998@0.0.1920.998" timestamp="1611656106394" />
   </component>
 </project>

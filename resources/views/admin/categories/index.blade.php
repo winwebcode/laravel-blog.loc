@@ -41,16 +41,23 @@
                     <tbody>
 
                     @foreach($categories as $category)
+                        <tr>
+                            <td>{{$category->id}}</td>
+                            <td>{{$category->title}}</td>
+                            <td><a href="{{route('categories.edit', $category->id)}}" class="fa fa-pencil"></a>
 
-                    <tr>
-                        <td>{{$category->id}}</td>
-                        <td>{{$category->title}}</td>
-                        <td><a href="{{route('categories.edit', $category->id)}}" class="fa fa-pencil"></a>
-                        {{Form::open(['route'=>['categories.destroy', $category->id], 'method' => 'delete'])}}
-                            <button type="submit" onclick="return confirm('You sure?')" class="delete"><b class="fa fa-remove"></b></td></button>
-                        {{Form::close()}}
-                    </tr>
+                                {{Form::open(['route'=>['categories.destroy', $category->id], 'method'=>'delete'])}}
+                                <button onclick="return confirm('are you sure?')" type="submit" class="delete">
+                                    <i class="fa fa-remove"></i>
+                                </button>
+
+                                {{Form::close()}}
+
+                            </td>
+                        </tr>
                     @endforeach
+
+                    </tfoot>
                 </table>
             </div>
             <!-- /.box-body -->
