@@ -25,7 +25,7 @@ Route::resource('/admin/categories', 'Admin\CategoriesController'); // для CR
 Route::group(['prefix' => 'admin', 'namespace'=> 'Admin'], function (){
     Route::get('/', 'DashboardController@index');
     Route::resource('/categories', 'CategoriesController');
-    Route::resource('/tags', 'TagsController');
+    Route::resource('/tags', 'TagsController')->name('tagtag');
     Route::resource('/users', 'UsersController');
     Route::resource('/posts', 'PostsController');
 });

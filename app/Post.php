@@ -11,8 +11,8 @@ class Post extends Model
 {
     use Sluggable;
 
-    const IS_DRAFT = 0;
-    const IS_PUBLIC = 1;
+    const IS_DRAFT = 1;
+    const IS_PUBLIC = 0;
 
     protected $fillable = ['title', 'content', 'date'];
 
@@ -25,6 +25,25 @@ class Post extends Model
     public function author()
     {
         return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function getCategoryTitle()
+    {
+        if ($this->category !=null){
+            return $this->category->title;
+        } else {
+            return 'Без категории';
+        }
+    }
+
+    public function getTagsTitles()
+    {
+        if(!$this->tags->isEmpty()) { //если не пусто
+            return implode(', ', $this->tags->pluck('title')->all());
+        } else {
+            return 'Теги не установлены';
+        }
+
     }
 
     public function tags()
@@ -119,7 +138,7 @@ class Post extends Model
         $this->save();
     }
 
-    public function setStatus()
+    public function setPublic()
     {
         $this->status = Post::IS_PUBLIC;
         $this->save();
@@ -127,10 +146,10 @@ class Post extends Model
 
     public function toggleStatus($value)
     {
-        if ($value == null) {
-            return $this->setDraft();
+        if ($value == null) { // по умолчанию НЕ черновик
+            return $this->setPublic(); //0
         } else {
-            return $this->setStatus();
+            return $this->setDraft(); //1
         }
     }
 
@@ -148,10 +167,10 @@ class Post extends Model
 
     public function toggleFeatured($value)
     {
-        if ($value == null) {
-            return $this->setFeatured();
+        if ($value == null) { // по умолчанию вкл обычная запись
+            return $this->setStandart(); //0
         } else {
-            return $this->setStandart();
+            return $this->setFeatured();
         }
     }
 
@@ -159,6 +178,14 @@ class Post extends Model
     {
         $date = Carbon::createFromFormat('d/m/y', $value)->format('Y-m-d');
         $this->attributes['date'] = $date;
+        return $date;
+    }
+
+    public function getDateAttribute($value)
+    {
+        $date = Carbon::createFromFormat('Y-m-d', $value)->format('d/m/y');
+        $this->attributes['date'] = $date;
+        return $date;
     }
 
 }

@@ -46,18 +46,21 @@
                     <tr>
                         <td>{{$post->id}}</td>
                         <td>{{$post->title}}</td>
-                        <td>{{$post->category['title']}}</td>
-                        <td>Laravel, PHP</td>
+                        <td>{{$post->getCategoryTitle()}}</td>
+                        <td>{{$post->getTagsTitles()}}</td>
                         <td>
                             <img src="{{$post->getImage()}}" alt="" width="100">
                         </td>
-                        <td><a href="{{route('posts.edit', $post->id)}}" class="fa fa-pencil"></a> <a href="#" class="fa fa-remove"></a></td>
-                        {{Form::open(['route'=>['posts.destroy', $post->id], 'method'=>'delete'])}}
-                        <button onclick="return confirm('are you sure?')" type="submit" class="delete">
-                            <i class="fa fa-remove"></i>
-                        </button>
+                        <td>
+                            <a href="{{route('posts.edit', $post->id)}}" class="fa fa-pencil"></a>
 
-                        {{Form::close()}}
+                            {{Form::open(['route'=>['posts.destroy', $post->id], 'method'=>'delete'])}}
+                            <button onclick="return confirm('are you sure?')" type="submit" class="delete">
+                                <i class="fa fa-remove"></i>
+                            </button>
+
+                            {{Form::close()}}
+                        </td>
                     </tr>
                     @endforeach
                     </tfoot>
