@@ -16,6 +16,9 @@
 });*/
 
 Route::get('/', 'HomeController@index'); //имя контроллера@имя метода
+Route::get('/post/{slug}', 'HomeController@show')->name('post.show'); //имя контроллера@имя метода
+Route::get('/tag/{slug}', 'HomeController@tag')->name('tag.show'); //имя контроллера@имя метода
+Route::get('/category/{slug}', 'HomeController@category')->name('category.show'); //имя контроллера@имя метода
 
 //Route::get('/testpage', 'TestController@testfunc'); //имя контроллера@имя метода
 
