@@ -54,6 +54,15 @@ class Post extends Model
         }
     }
 
+    public function hasCategory()
+    {
+        if ($this->category_id != null) {
+            return $this->category->slug;
+        } else {
+            return null;
+        }
+    }
+
     public function getTagsTitles()
     {
         if (!$this->tags->isEmpty()) { //если не пусто
@@ -253,10 +262,26 @@ class Post extends Model
         return self::all()->where('category_id', '=', $this->category_id)->except('$this->id');
     }
 
-    public function featured()
+    /*public function featured()
     {
         //посты рекомендуемые
         return self::all()->where('is_featured', '=', '1')->except('$this->id');
+    }*/
+
+    public static function getPopularPosts()
+    {
+        return self::orderBy('views', 'desc')->take(3)->get();
     }
+
+    public static function getFeaturedPosts()
+    {
+        return self::where('is_featured', '=', 1)->take(3)->get();
+    }
+
+    public static function getRecentPosts()
+    {
+        return self::orderBy('date', 'desc')->take(4)->get();
+    }
+
 
 }
