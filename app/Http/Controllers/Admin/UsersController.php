@@ -77,7 +77,7 @@ class UsersController extends Controller
         $this->validate($request, [
             'name' => [
                 'required',
-                Rule::unique('users')->ignore($user->name),
+                Rule::unique('users')->ignore($user->id),
             ],
             'email' => [
                 'required',
