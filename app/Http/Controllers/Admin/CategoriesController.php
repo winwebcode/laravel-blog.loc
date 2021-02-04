@@ -40,7 +40,7 @@ class CategoriesController extends Controller
             ->get();
         foreach ($categoryName2 as $category) {}*/
 
-       return view('admin.categories.edit', compact('category', 'categoryName2'));
+       return view('admin.categories.edit', compact('category'));
     }
 
     public function update(Request $request, $id)

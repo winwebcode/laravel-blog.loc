@@ -20,15 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06797367-d3b1-4791-a1e8-0d936e8b41d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/_sidebar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MyAuthController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/posts/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/posts/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/_sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -194,7 +191,7 @@
       <updated>1610520918938</updated>
       <workItem from="1610520920588" duration="178969000" />
       <workItem from="1612271584749" duration="243000" />
-      <workItem from="1612271856337" duration="24976000" />
+      <workItem from="1612271856337" duration="30850000" />
     </task>
     <servers />
   </component>
@@ -229,14 +226,14 @@
       <screen x="0" y="0" width="1920" height="998" />
     </state>
     <state x="1097" y="243" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.998@0.0.1920.998" timestamp="1612372830765" />
-    <state x="987" y="195" key="NewPhpClassDialog" timestamp="1612260648381">
+    <state x="987" y="195" key="NewPhpClassDialog" timestamp="1612424298711">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
-    <state x="987" y="195" key="NewPhpClassDialog/0.0.1920.998@0.0.1920.998" timestamp="1612260648381" />
-    <state x="1289" y="411" key="NewPhpFileDialog" timestamp="1612351006146">
+    <state x="987" y="195" key="NewPhpClassDialog/0.0.1920.998@0.0.1920.998" timestamp="1612424298711" />
+    <state x="1289" y="411" key="NewPhpFileDialog" timestamp="1612427328377">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
-    <state x="1289" y="411" key="NewPhpFileDialog/0.0.1920.998@0.0.1920.998" timestamp="1612351006146" />
+    <state x="1289" y="411" key="NewPhpFileDialog/0.0.1920.998@0.0.1920.998" timestamp="1612427328377" />
     <state x="416" y="153" key="SettingsEditor" timestamp="1612271782162">
       <screen x="0" y="0" width="1920" height="998" />
     </state>

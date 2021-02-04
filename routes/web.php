@@ -19,6 +19,10 @@ Route::get('/', 'HomeController@index'); //имя контроллера@имя 
 Route::get('/post/{slug}', 'HomeController@show')->name('post.show');
 Route::get('/tag/{slug}', 'HomeController@tag')->name('tag.show');
 Route::get('/category/{slug}', 'HomeController@category')->name('category.show');
+Route::get('/register', 'MyAuthController@registerForm'); //форма регистрации
+Route::post('/register', 'MyAuthController@register'); //сюда прилетают данные формы регистрации
+Route::get('/login', 'MyAuthController@loginForm')->name('login.form');
+
 
 //Route::get('/testpage', 'TestController@testfunc'); //имя контроллера@имя метода
 

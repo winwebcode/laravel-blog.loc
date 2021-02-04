@@ -42,7 +42,7 @@
                         <a href="{{route('post.show', $featuredPost->slug)}}" class="overlay-text text-center">
                             <h5 class="text-uppercase">{{$featuredPost->title}}</h5>
 
-                            {!!Str::words($post->content,10)!!}
+                            {!!Str::words($featuredPost->content,10)!!}
                         </a>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
             <ul>
                 @foreach($categories as $category)
                 <li>
-                    <a href="{{route('categories.show', $category->slug)}}">{{$category->title}}</a>
+                    <a href="{{route('category.show', $category->slug)}}">{{$category->title}}</a>
                     <span class="post-count pull-right">{{$category->posts->count()}}</span>
                 </li>
                 @endforeach
