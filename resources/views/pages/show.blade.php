@@ -47,11 +47,10 @@
                     </div>
                 </article>
                 <div class="top-comment"><!--top comment-->
-                    <img src="/images/comment.jpg" class="pull-left img-circle" alt="">
-                    <h4>Rubel Miah</h4>
+                    <img src="{{$post->author->getAvatar()}}" class="pull-left img-circle" alt="">
+                    <h4>{{$post->getAuthor()}}</h4>
 
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy hello ro mod tempor
-                        invidunt ut labore et dolore magna aliquyam erat.</p>
+                    <p>User sign</p>
                 </div><!--top comment end-->
                 <div class="row"><!--blog next previous-->
                     <div class="col-md-6">
@@ -130,7 +129,7 @@
                 </div>
                 <!-- end bottom comment-->
 
-
+                @if(Auth::check() == true)
                 <div class="leave-comment"><!--leave comment-->
                     <h4>Leave a reply</h4>
 
@@ -161,7 +160,9 @@
                         <a href="#" class="btn send-btn">Post Comment</a>
                     </form>
                 </div><!--end leave comment-->
+                @endif
             </div>
+
             @include('pages._sidebar')
         </div>
     </div>
