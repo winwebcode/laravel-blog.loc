@@ -17,7 +17,7 @@
 
 
 
-Route::get('/', 'HomeController@index'); //имя контроллера@имя метода
+Route::get('/', 'HomeController@index')->name('blog'); //имя контроллера@имя метода
 Route::get('/post/{slug}', 'HomeController@show')->name('post.show');
 Route::get('/tag/{slug}', 'HomeController@tag')->name('tag.show');
 Route::get('/category/{slug}', 'HomeController@category')->name('category.show');
@@ -27,6 +27,7 @@ Route::group(['middleware' => 'auth'], function (){
     Route::get('/logout', 'MyAuthController@logout');
     Route::get('/profile', 'ProfileController@index')->name('profile');
     Route::post('/profile', 'ProfileController@store');
+    Route::post('/comment', 'CommentsController@store');
 });
 
 /*для гостей*/
@@ -40,11 +41,14 @@ Route::group(['middleware' => 'guest'], function () {
 
 /* для админов*/
 Route::group(['prefix' => 'admin', 'namespace'=> 'Admin', 'middleware' => 'admin'], function (){
-    Route::get('/', 'DashboardController@index');
+    Route::get('/', 'DashboardController@index')->name('admin');
     Route::resource('/categories', 'CategoriesController');
     Route::resource('/tags', 'TagsController');
     Route::resource('/users', 'UsersController');
     Route::resource('/posts', 'PostsController');
+    Route::get('/comments', 'CommentsController@index')->name('comment.show');
+    Route::get('/comments/toggle/{id}', 'CommentsController@toggle')->name('comment.status');
+    Route::get('/comments/destroy/{id}', 'CommentsController@destroy')->name('comment.remove');
 });
 
 //разные варианты записи роутов

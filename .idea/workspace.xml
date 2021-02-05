@@ -20,9 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06797367-d3b1-4791-a1e8-0d936e8b41d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CommentsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/comments/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MyAuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MyAuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +195,7 @@
       <updated>1610520918938</updated>
       <workItem from="1610520920588" duration="178969000" />
       <workItem from="1612271584749" duration="243000" />
-      <workItem from="1612271856337" duration="43881000" />
+      <workItem from="1612271856337" duration="65509000" />
     </task>
     <servers />
   </component>
@@ -226,10 +234,10 @@
       <screen x="0" y="0" width="1920" height="998" />
     </state>
     <state x="987" y="195" key="NewPhpClassDialog/0.0.1920.998@0.0.1920.998" timestamp="1612424298711" />
-    <state x="1289" y="411" key="NewPhpFileDialog" timestamp="1612451589419">
+    <state x="1289" y="411" key="NewPhpFileDialog" timestamp="1612534970986">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
-    <state x="1289" y="411" key="NewPhpFileDialog/0.0.1920.998@0.0.1920.998" timestamp="1612451589419" />
+    <state x="1289" y="411" key="NewPhpFileDialog/0.0.1920.998@0.0.1920.998" timestamp="1612534970986" />
     <state x="416" y="153" key="SettingsEditor" timestamp="1612271782162">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
@@ -238,10 +246,10 @@
       <screen x="0" y="0" width="1920" height="998" />
     </state>
     <state x="769" y="412" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.998@0.0.1920.998" timestamp="1611642718649" />
-    <state x="937" y="260" width="744" height="534" key="find.popup" timestamp="1612375781622">
+    <state x="937" y="260" width="744" height="534" key="find.popup" timestamp="1612540780914">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
-    <state x="937" y="260" width="744" height="534" key="find.popup/0.0.1920.998@0.0.1920.998" timestamp="1612375781622" />
+    <state x="937" y="260" width="744" height="534" key="find.popup/0.0.1920.998@0.0.1920.998" timestamp="1612540780914" />
     <state x="943" y="236" key="run.anything.popup" timestamp="1611656106394">
       <screen x="0" y="0" width="1920" height="998" />
     </state>

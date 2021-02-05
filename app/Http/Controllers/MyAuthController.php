@@ -25,7 +25,7 @@ class MyAuthController extends Controller
         $user = User::add($request->all());
         $user->generatePassword($request->get('password'));
 
-        return redirect()->route('login.form');
+        return redirect()->route('login');
     }
 
     public function loginForm()

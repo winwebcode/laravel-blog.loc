@@ -3,16 +3,19 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Comment extends Model
 {
+    protected $fillable = ['text', 'post_id'];
     public function post()
     {
-         return $this->hasOne(Post::class);
+        //Коммент. принадлежит 1 посту. , но 1 пост может иметь множество коммент.
+         return $this->belongsTo(Post::class);
     }
     public function author()
     {
-        return $this->hasOne(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function allow()
@@ -27,7 +30,7 @@ class Comment extends Model
         $this->save();
     }
 
-    public function togleStatus()
+    public function toggleStatus()
     {
         if($this->status == 0) {
             return $this->allow();
@@ -40,4 +43,22 @@ class Comment extends Model
     {
         $this->delete();
     }
+
+    public static function add($fields)
+    {
+        $comment = new static;
+        $comment->fill($fields);
+        $comment->user_id = Auth::user()->id;
+        $comment->save();
+
+        return $comment;
+
+    }
+
+    public static function howComments()
+    {
+        return Comment::all()->count();
+    }
+
+
 }

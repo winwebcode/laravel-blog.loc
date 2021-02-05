@@ -27,6 +27,20 @@ class Post extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+    /*public function getComments()
+    {
+        if (!$this->comments->isEmpty()) {
+            return $this->comments->text;
+        } else {
+            return null;
+        }
+    }*/
+
     public function getAuthor()
     {
         if ($this->user_id != null) {
@@ -283,5 +297,8 @@ class Post extends Model
         return self::orderBy('date', 'desc')->take(4)->get();
     }
 
-
+    public function getComments()
+    {
+        return $this->comments()->where('status', 1)->get();
+    }
 }
