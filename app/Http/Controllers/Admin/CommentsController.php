@@ -17,16 +17,15 @@ class CommentsController extends Controller
 
     public function toggle($id)
     {
-        $comment = Comment::find($id);
-        $comment->toggleStatus($id);
+        Comment::find($id)->toggleStatus($id);
 
         return redirect()->route('comment.show');
     }
 
     public function destroy($id)
     {
-        $comment = Comment::find($id);
-        $comment->remove($id);
+        Comment::find($id)->remove();
+
         return redirect()->route('comment.show');
     }
 }
