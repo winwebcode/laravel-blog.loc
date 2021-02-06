@@ -21,6 +21,8 @@ Route::get('/', 'HomeController@index')->name('blog'); //имя контролл
 Route::get('/post/{slug}', 'HomeController@show')->name('post.show');
 Route::get('/tag/{slug}', 'HomeController@tag')->name('tag.show');
 Route::get('/category/{slug}', 'HomeController@category')->name('category.show');
+Route::post('/subscribe', 'AdmSubscribeController@subscribe')->name('subscribe.form');
+Route::get('/verify/{token}', 'AdmSubscribeController@verify')->name('subscribe.verify');
 
 /*для авторизованных*/
 Route::group(['middleware' => 'auth'], function (){
@@ -49,6 +51,7 @@ Route::group(['prefix' => 'admin', 'namespace'=> 'Admin', 'middleware' => 'admin
     Route::get('/comments', 'CommentsController@index')->name('comment.show');
     Route::get('/comments/toggle/{id}', 'CommentsController@toggle')->name('comment.status');
     Route::get('/comments/destroy/{id}', 'CommentsController@destroy')->name('comment.destroy');
+    Route::resource('/posts', 'AdmSubscribeController');
 });
 
 //разные варианты записи роутов
