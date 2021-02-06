@@ -120,7 +120,7 @@
 
                     <div class="comment-text">
                         <a href="#" class="replay btn pull-right"> Replay</a>
-                        <h5>{{$comment->post->getAuthor()}}</h5>
+                        <h5>{{$comment->getUserName()}}</h5>
 
                         <p class="comment-date">
                             {{$comment->created_at->diffForHumans()}}

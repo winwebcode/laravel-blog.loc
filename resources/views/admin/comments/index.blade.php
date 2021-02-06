@@ -49,7 +49,7 @@
                                 @else
                                     <a href="{{route('comment.status', $comment->id)}}" class="fa fa-thumbs-o-up" title="Одобрить!"></a>
                                 @endif
-                                <a href="{{route('comment.remove', $comment->id)}}" class="fa fa-remove" title="Удалить"></a>
+                                <a href="{{route('comment.destroy', $comment->id)}}" class="fa fa-remove" title="Удалить"></a>
                             </td>
                         </tr>
 

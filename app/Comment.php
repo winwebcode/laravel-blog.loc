@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class Comment extends Model
 {
     protected $fillable = ['text', 'post_id'];
+
     public function post()
     {
         //Коммент. принадлежит 1 посту. , но 1 пост может иметь множество коммент.
@@ -15,7 +16,7 @@ class Comment extends Model
     }
     public function author()
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 
     public function allow()
@@ -41,6 +42,7 @@ class Comment extends Model
 
     public function remove()
     {
+        //code
         $this->delete();
     }
 
@@ -55,10 +57,18 @@ class Comment extends Model
 
     }
 
-    public static function howComments()
+    public static function howNewComments()
     {
-        return Comment::all()->count();
+        return Comment::all()->where('status', 0)->count();
     }
 
+    public function getUserName()
+    {
+        if($this->author->name != null) {
+            return $this->author->name;
+        } else {
+            return null;
+        }
+    }
 
 }

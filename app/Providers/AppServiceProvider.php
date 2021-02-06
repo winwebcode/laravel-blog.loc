@@ -31,10 +31,11 @@ class AppServiceProvider extends ServiceProvider
             $view->with('featuredPosts', Post::getFeaturedPosts());
             $view->with('recentPosts', Post::getRecentPosts());
             $view->with('categories', Category::all());
+
         });
 
         view()->composer('admin._sidebar', function ($view){
-            $view->with('howComments', Comment::howComments());
+            $view->with('howNewComments', Comment::howNewComments());
 
         });
     }

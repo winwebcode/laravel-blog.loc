@@ -301,4 +301,9 @@ class Post extends Model
     {
         return $this->comments()->where('status', 1)->get();
     }
+
+    public function countComments()
+    {
+        return $this->comments()->count();
+    }
 }

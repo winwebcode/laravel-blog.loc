@@ -13,7 +13,7 @@
         <a href="{{route('comment.show')}}">
             <i class="fa fa-commenting"></i> <span>Комментарии</span>
             <span class="pull-right-container">
-              <small class="label pull-right bg-green">{{$howComments}}</small>
+              <small class="label pull-right bg-green">{{$howNewComments}}</small>
             </span>
         </a>
     </li>
