@@ -277,12 +277,6 @@ class Post extends Model
         return self::all()->where('category_id', '=', $this->category_id)->except('$this->id');
     }
 
-    /*public function featured()
-    {
-        //посты рекомендуемые
-        return self::all()->where('is_featured', '=', '1')->except('$this->id');
-    }*/
-
     public static function getPopularPosts()
     {
         return self::orderBy('views', 'desc')->take(3)->get();
