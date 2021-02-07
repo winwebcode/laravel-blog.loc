@@ -20,13 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06797367-d3b1-4791-a1e8-0d936e8b41d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdmSubscribeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/SubscribeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Mail/SubscribeEmail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/email/verify.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/subscribers/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/subscribers/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/alerts_message.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/alerts_message.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdmSubscribeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdmSubscribeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SubscribeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SubscribeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Subscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Subscriber.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,26 +219,26 @@
       <screen x="0" y="0" width="1920" height="998" />
     </state>
     <state x="1034" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.998@0.0.1920.998" timestamp="1611655059555" />
-    <state x="697" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612618673163">
+    <state x="697" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612711615622">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
-    <state x="697" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.998@0.0.1920.998" timestamp="1612618673163" />
+    <state x="697" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.998@0.0.1920.998" timestamp="1612711615622" />
     <state x="1039" y="458" key="#com.intellij.tools.ToolEditorDialog" timestamp="1611734810465">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
     <state x="1039" y="458" key="#com.intellij.tools.ToolEditorDialog/0.0.1920.998@0.0.1920.998" timestamp="1611734810465" />
-    <state x="1097" y="243" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612608072722">
+    <state x="1097" y="243" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612716466759">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
-    <state x="1097" y="243" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.998@0.0.1920.998" timestamp="1612608072722" />
+    <state x="1097" y="243" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.998@0.0.1920.998" timestamp="1612716466759" />
     <state x="987" y="195" key="NewPhpClassDialog" timestamp="1612424298711">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
     <state x="987" y="195" key="NewPhpClassDialog/0.0.1920.998@0.0.1920.998" timestamp="1612424298711" />
-    <state x="1289" y="411" key="NewPhpFileDialog" timestamp="1612613419315">
+    <state x="1289" y="411" key="NewPhpFileDialog" timestamp="1612715957856">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
-    <state x="1289" y="411" key="NewPhpFileDialog/0.0.1920.998@0.0.1920.998" timestamp="1612613419315" />
+    <state x="1289" y="411" key="NewPhpFileDialog/0.0.1920.998@0.0.1920.998" timestamp="1612715957856" />
     <state x="416" y="153" key="SettingsEditor" timestamp="1612271782162">
       <screen x="0" y="0" width="1920" height="998" />
     </state>

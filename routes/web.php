@@ -51,7 +51,7 @@ Route::group(['prefix' => 'admin', 'namespace'=> 'Admin', 'middleware' => 'admin
     Route::get('/comments', 'CommentsController@index')->name('comment.show');
     Route::get('/comments/toggle/{id}', 'CommentsController@toggle')->name('comment.status');
     Route::get('/comments/destroy/{id}', 'CommentsController@destroy')->name('comment.destroy');
-    Route::resource('/posts', 'AdmSubscribeController');
+    Route::resource('/subscribers', 'AdmSubscribeController');
 });
 
 //разные варианты записи роутов

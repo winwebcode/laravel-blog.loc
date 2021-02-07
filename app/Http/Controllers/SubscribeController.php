@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\SubscribeEmail;
-use App\Subscription;
+use App\Subscriber;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -15,8 +15,8 @@ class SubscribeController extends Controller
            'email' => 'required|email|unique:subscriptions',
         ]);
 
-        $subscriber = Subscription::add($request->get('email'));
-
+        $subscriber = Subscriber::add($request->get('email'));
+        $subscriber->generateToken();
         Mail::to($subscriber)->send(new SubscribeEmail($subscriber));
 
         return redirect()->back()->with('status', 'Перейдите по ссылке из письма для активации!');
@@ -24,7 +24,7 @@ class SubscribeController extends Controller
 
     public function verify($token)
     {
-        $subscriber = Subscription::where('token', '=', $token)->firstOrFail();
+        $subscriber = Subscriber::where('token', '=', $token)->firstOrFail();
         $subscriber->token = null;
         $subscriber->save();
         return redirect()->back()->with('status', 'Спасибо что подписались!');

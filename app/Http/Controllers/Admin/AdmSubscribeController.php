@@ -2,44 +2,52 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\SubscribeController;
+use App\Mail\SubscribeEmail;
+use App\Subscriber;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 
 class AdmSubscribeController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()
     {
-        SubscribeController::all();
+        $subscribers = Subscriber::all();
 
-        return view('pages.show', compact('post'));
+        return view('admin.subscribers.index', compact('subscribers'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function create()
     {
-        //
+        return view('admin.subscribers.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'email' => 'required|email|unique:subscriptions',
+        ]);
+        Subscriber::add($request->get('email'));
 
+        //токен не создаём, добавляем без подтверждения
+        return redirect()->back()->with('status', 'Подписчик добавлен без подтверждения почты!');
     }
 
     /**
@@ -80,10 +88,11 @@ class AdmSubscribeController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
     {
-        //
+        Subscriber::find($id)->delete();
+        return redirect()->route('subscribers.index');
     }
 }
