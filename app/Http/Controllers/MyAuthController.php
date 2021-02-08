@@ -44,7 +44,13 @@ class MyAuthController extends Controller
            'email' => $request->get('email'),
            'password' => $request->get('password'),
         ])) {
-            return redirect('/');
+            //проверка на бан
+            if(Auth::user()->ban == 1) {
+                Auth::logout();
+                return redirect()->back()->with('status', 'Вы забанены');
+            } else {
+                return redirect('/');
+            }
         }
         else {
             return redirect()->back()->with('status', 'Неправильный логин или пароль');
@@ -58,6 +64,6 @@ class MyAuthController extends Controller
         /*$request->session()->invalidate();
         $request->session()->regenerateToken();*/
 
-        return redirect('/');
+        return redirect('/')->with('status', 'Вы вышли из учётной записи');
     }
 }

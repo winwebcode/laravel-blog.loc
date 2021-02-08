@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- favicon icon -->
-
     <title>Blog</title>
 
-    <!-- common css -->
+              <!-- common css -->
     <link rel="stylesheet" href="/css/front.css">
 
     <!-- HTML5 shim and Respond.js IE9 support of HTML5 elements and media queries -->
@@ -45,14 +44,17 @@
 
                 <ul class="nav navbar-nav text-uppercase">
                     <li><a href="/">Homepage</a></li>
-                    <li><a href="about-me.html">ABOUT ME </a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="#">ABOUT ME </a></li>
+                    <li><a href="#">CONTACT</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav text-uppercase pull-right">
                     @if(Auth::check() == true)
                         <li><a href="{{route('profile')}}">My profile</a></li>
                         <li><a href="/logout">Logout</a></li>
+                        @if(Auth::user()->is_admin == 1)
+                            <li><a href="{{route('admin')}}">Admin</a></li>
+                        @endif
                     @else
                     <li><a href="/register">Register</a></li>
                     <li><a href="{{route('login')}}">Login</a></li>
@@ -231,7 +233,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="text-center">&copy; 2017 <a href="#">Blog, </a> Designed with <i
+                    <div class="text-center">&copy; 2021 <a href="#">Blog, </a> Designed with <i
                             class="fa fa-heart"></i> by <a href="#">Marlin</a>
                     </div>
                 </div>

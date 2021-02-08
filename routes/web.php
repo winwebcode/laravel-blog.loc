@@ -47,6 +47,7 @@ Route::group(['prefix' => 'admin', 'namespace'=> 'Admin', 'middleware' => 'admin
     Route::resource('/categories', 'CategoriesController');
     Route::resource('/tags', 'TagsController');
     Route::resource('/users', 'UsersController');
+    Route::get('/users/ban/{id}', 'UsersController@ban')->name('users.ban');
     Route::resource('/posts', 'PostsController');
     Route::get('/comments', 'CommentsController@index')->name('comment.show');
     Route::get('/comments/toggle/{id}', 'CommentsController@toggle')->name('comment.status');

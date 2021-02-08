@@ -38,4 +38,10 @@ class HomeController extends Controller
         $posts = $category->posts()->paginate(2);
         return view('pages.list', compact('posts'));
     }
+
+   protected function setMetaTags($slug)
+    {//SEO
+        $metaTags = Post::where('slug', $slug)->firstOrFail();
+        return view('layout', compact('metaTags'));
+    }
 }

@@ -133,22 +133,22 @@ class User extends Authenticatable
 
     public function ban()
     {
-        $this->status = User::IS_BANNED;
+        $this->ban = User::IS_BANNED;
         $this->save();
     }
 
     public function unban()
     {
-        $this->status = User::IS_ACTIVE;
+        $this->ban = User::IS_ACTIVE;
         $this->save();
     }
 
-    public function toggleBan($value)
+    public function toggleBan()
     {
-        if($value == null) {
-            $this->unban();
-        } else {
+        if($this->ban == null or $this->ban == 0) {
             $this->ban();
+        } else {
+            $this->unban();
         }
     }
 }

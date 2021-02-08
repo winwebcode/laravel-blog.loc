@@ -301,4 +301,6 @@ class Post extends Model
     {
         return $this->comments()->count();
     }
+
+
 }
