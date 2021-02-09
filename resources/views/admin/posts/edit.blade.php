@@ -1,4 +1,4 @@
-@extends('admin.layout') // include /views/admin/layout.blade.php
+@extends('admin.layout')
 
 @section('content')
     <!-- Content Wrapper. Contains page content -->
@@ -89,18 +89,29 @@
 
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Описание</label>
+                            <label for="exampleInputEmail1">Полный текст статьи</label>
+                            <textarea name="content" id="" cols="30" rows="10" class="form-control">{{$post->content}}</textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div align="center"><h3>SEO</h3></div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Описание для поисковых систем (если вы оставите пустым, оно
+                                будет сгенерировано автоматически из первых 160 символов)</label>
                             <textarea name="description" id="" cols="30" rows="10" class="form-control">{{$post->description}}</textarea>
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Полный текст</label>
-                            <textarea name="content" id="" cols="30" rows="10" class="form-control">{{$post->content}}
+                            <label for="exampleInputEmail1">Ключевые слова</label>
+                            <textarea name="keywords" id="" cols="30" rows="10" class="form-control">{{$post->keywords}}
               </textarea>
                         </div>
                     </div>
+
+
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class Post extends Model
 {
@@ -15,7 +16,7 @@ class Post extends Model
     const IS_DRAFT = 1;
     const IS_PUBLIC = 0;
 
-    protected $fillable = ['title', 'content', 'date', 'description'];
+    protected $fillable = ['title', 'content', 'date', 'description', 'keywords'];
 
     public function category()
     {
@@ -111,15 +112,25 @@ class Post extends Model
     {
         $post = new static;
         $post->fill($fields);
+        $post->generateDescription();
+
         $post->user_id = Auth::user()->user_id;
         $post->save();
 
         return $post;
     }
 
+    public function generateDescription()
+    {
+        if($this->description == null) {
+            $this->description = str_limit(strip_tags($this->content), 160);
+        }
+    }
+
     public function edit($fields)
     {
         $this->fill($fields);
+        $this->generateDescription();
         $this->save();
     }
 

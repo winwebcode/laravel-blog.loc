@@ -1,4 +1,4 @@
-@extends('admin.layout') //include /views/admin/layout.blade.php
+@extends('admin.layout')
 
 @section('content')
 <!-- Content Wrapper. Contains page content -->

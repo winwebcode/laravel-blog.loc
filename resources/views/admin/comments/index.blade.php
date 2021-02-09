@@ -42,7 +42,7 @@
                         @foreach($comments as $comment)
                         <tr>
                             <td>{{$comment->id}}</td>
-                            <td>{{$comment->text}}</td>
+                            <td>{!!$comment->text!!}</td>
                             <td>
                                 @if($comment->status == 1)
                                     <a href="{{route('comment.status', $comment->id)}}" class="fa fa-lock" title="Заблокировать!"></a>
@@ -50,6 +50,7 @@
                                     <a href="{{route('comment.status', $comment->id)}}" class="fa fa-thumbs-o-up" title="Одобрить!"></a>
                                 @endif
                                 <a href="{{route('comment.destroy', $comment->id)}}" class="fa fa-remove" title="Удалить"></a>
+                                    <a href="{{route('comment.edit', $comment->id)}}" class="fa fa-pencil"></a>
                             </td>
                         </tr>
 
