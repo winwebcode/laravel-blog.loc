@@ -9,7 +9,6 @@
             <div class="col-md-8">
 
                 <div class="leave-comment mr0"><!--leave comment-->
-                    @include('pages.alerts_message')
                     <h3 class="text-uppercase">My profile</h3>
                     @include('admin.errors')
                     <br>
@@ -38,6 +37,13 @@
                         <div class="form-group">
                             <div class="col-md-12">
                                 <input type="file" class="form-control" id="image" name="avatar">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" id="sign" name="sign"
+                                       placeholder="Подпись пользователя" value="{{$user->sign}}">
                             </div>
                         </div>
                         <button type="submit" name="submit" class="btn send-btn">Update</button>

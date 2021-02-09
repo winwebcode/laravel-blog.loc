@@ -4,7 +4,6 @@
         <aside class="widget news-letter">
             <h3 class="widget-title text-uppercase text-center">Get Newsletter</h3>
             @include('admin.errors')
-            @include('pages.alerts_message')
             <form action="{{route('subscribe.form')}}" method="post">
                 {{csrf_field()}}
                 <input type="email" name="email" required="false" placeholder="Your email address">

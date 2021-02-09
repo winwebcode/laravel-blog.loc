@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email',
+        'name', 'email', 'sign'
     ];
 
     const IS_ACTIVE = 0;
@@ -133,8 +133,15 @@ class User extends Authenticatable
 
     public function ban()
     {
-        $this->ban = User::IS_BANNED;
-        $this->save();
+        if($this->id != 1) {
+            $this->ban = User::IS_BANNED;
+            $this->save();
+        }
+        else {
+
+        }
+
+
     }
 
     public function unban()
@@ -149,6 +156,13 @@ class User extends Authenticatable
             $this->ban();
         } else {
             $this->unban();
+        }
+    }
+
+    public function getSign()
+    {
+        if($this->sign == null) {
+            return 'Здесь может быть ваша реклама';
         }
     }
 }

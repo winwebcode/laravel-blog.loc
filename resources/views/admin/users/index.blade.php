@@ -49,11 +49,13 @@
                                     <img src="{{$user->getAvatar()}}" alt="" class="img-responsive" width="75" height="75">
                                 </td>
                                 <td><a href="{{route('users.edit', $user->id)}}" class="fa fa-pencil"></a>
+                                @if($user->id != 1)
                                     @if($user->ban == 0)
                                         <a href="{{route('users.ban', $user->id)}}" class="fa fa-lock" title="Заблокировать!"></a>
                                     @else
                                         <a href="{{route('users.ban', $user->id)}}" class="fa fa-thumbs-o-up" title="Разблокировать!"></a>
                                     @endif
+                                @endif
                                     {{Form::open(['route'=>['users.destroy', $user->id], 'method'=>'delete'])}}
                                     <button onclick="return confirm('are you sure?')" type="submit" class="delete">
                                         <i class="fa fa-remove"></i>

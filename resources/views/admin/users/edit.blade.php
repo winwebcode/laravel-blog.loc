@@ -38,6 +38,13 @@
                             <label for="exampleInputEmail1">Пароль</label>
                             <input type="password" name="password" class="form-control" id="exampleInputEmail1" placeholder="">
                         </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Подпись</label>
+                            <input type="text" class="form-control" id="sign" name="sign"
+                                   placeholder="Подпись пользователя" value="{{$user->sign}}">
+                        </div>
+
                         <div class="form-group">
                             <img src="{{$user->getAvatar()}}"  alt="" width="200" class="img-responsive">
                             <label for="exampleInputFile">Аватар</label>
@@ -45,6 +52,8 @@
 
                             <p class="help-block">Какое-нибудь уведомление о форматах..</p>
                         </div>
+
+
                     </div>
                 </div>
                 <!-- /.box-body -->

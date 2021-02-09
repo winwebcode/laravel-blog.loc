@@ -95,4 +95,13 @@ class AdmSubscribeController extends Controller
         Subscriber::find($id)->delete();
         return redirect()->route('subscribers.index');
     }
+
+    public function clear()
+    {
+        $subscribers = Subscriber::all();
+        foreach ($subscribers as $subscriber) {
+            $subscriber->deleteNonActive();
+        }
+        return redirect()->route('subscribers.index');
+    }
 }

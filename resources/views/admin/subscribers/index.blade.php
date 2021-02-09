@@ -29,6 +29,8 @@
                     <div class="form-group">
                         @include('admin.errors')
                         <a href="{{route('subscribers.create')}}" class="btn btn-success">Добавить</a>
+                        {{csrf_field()}}
+                        <a href="{{route('subscribers.clear')}}" class="btn btn-success">Удалить не активированных >30дн.</a>
                     </div>
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
@@ -36,6 +38,7 @@
                             <th>ID</th>
                             <th>Email</th>
                             <th>Действия</th>
+                            <th>Не активирован (дней)</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -50,7 +53,8 @@
                                         <i class="fa fa-remove"></i>
                                     </button>
 
-                            {{Form::close()}}
+                                {{Form::close()}}
+                            <td>{{$subscriber->diffDays()}}</td>
 
                         </tr>
 

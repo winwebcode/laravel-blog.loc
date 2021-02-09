@@ -64,7 +64,6 @@
             </div>
             <!-- /.navbar-collapse -->
 
-
             <div class="show-search">
                 <form role="search" method="get" id="searchform" action="#">
                     <div>
@@ -76,7 +75,7 @@
     </div>
     <!-- /.container-fluid -->
 </nav>
-
+@include('pages.alerts_message')
 @yield('content')
 
 <!--footer start-->

@@ -49,10 +49,10 @@
                     </div>
                 </article>
                 <div class="top-comment"><!--top comment-->
-                    <img src="{{$post->author->getAvatar()}}" class="pull-left img-circle" alt="">
+                    <img src="{{$post->author->getAvatar()}}" class="img-circle" width="75" height="75" alt="">
                     <h4>{{$post->getAuthor()}}</h4>
 
-                    <p>User sign</p>
+                    <p>{!!$post->author->getSign()!!}</p>
                 </div><!--top comment end-->
                 <div class="row"><!--blog next previous-->
                     <div class="col-md-6">
