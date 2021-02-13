@@ -56,6 +56,9 @@ Route::group(['prefix' => 'admin', 'namespace'=> 'Admin', 'middleware' => 'admin
     Route::post('/comments', 'CommentsController@update')->name('comment.update');
     Route::resource('/subscribers', 'AdmSubscribeController');
     Route::get('/subscribers-clear', 'AdmSubscribeController@clear')->name('subscribers.clear');
+    Route::get('/settings', 'SettingsController@showSettings')->name('settings');
+    Route::get('/settings/{id}', 'SettingsController@tumbler')->name('settings.tumbler');
+
 });
 
 //разные варианты записи роутов

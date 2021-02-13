@@ -32,25 +32,24 @@
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Текст</th>
+                            <th>Настройка</th>
+                            <th>Статус</th>
                             <th>Действия</th>
                         </tr>
                         </thead>
                         <tbody>
                         {{csrf_field()}}
-                        @foreach($comments as $comment)
+                        @foreach($settings as $setting)
                         <tr>
-                            <td>{{$comment->id}}</td>
-                            <td>{!!$comment->text!!}</td>
+                            <td>{{$setting->name}}</td>
+                            <td>{{$setting->getStatus()}}</td>
                             <td>
-                                @if($comment->status == 1)
-                                    <a href="{{route('comment.status', $comment->id)}}" class="fa fa-lock" title="Заблокировать!"></a>
+                                @if($setting->status == 1)
+                                    <a href="{{route('settings.tumbler', $setting->id)}}" class="fa fa-lock" title="Отключить!"></a>
                                 @else
-                                    <a href="{{route('comment.status', $comment->id)}}" class="fa fa-thumbs-o-up" title="Одобрить!"></a>
+                                    <a href="{{route('settings.tumbler', $setting->id)}}" class="fa fa-thumbs-o-up" title="Включить!"></a>
                                 @endif
-                                <a href="{{route('comment.destroy', $comment->id)}}" class="fa fa-remove" title="Удалить"></a>
-                                    <a href="{{route('comment.edit', $comment->id)}}" class="fa fa-pencil"></a>
+
                             </td>
                         </tr>
 

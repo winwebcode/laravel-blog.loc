@@ -19,5 +19,6 @@
     </li>
     <li><a href="{{route('users.index')}}"><i class="fa fa-users"></i> <span>Пользователи</span></a></li>
     <li><a href="{{route('subscribers.index')}}"><i class="fa fa-user-plus"></i> <span>Подписчики</span></a></li>
+    <li><a href="{{route('settings')}}"><i class="fa fa-user-plus"></i> <span>Настройки</span></a></li>
 
 </ul>

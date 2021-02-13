@@ -20,18 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06797367-d3b1-4791-a1e8-0d936e8b41d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_09_112637_add_sign_column_to_users.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SettingsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Settings.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_13_164754_create_settings_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/settings/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdmSubscribeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdmSubscribeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Subscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Subscriber.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/subscribers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/subscribers/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CommentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CommentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/comments/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/comments/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +161,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/uploads" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/settings" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -173,6 +170,7 @@
       <recent name="W:\domains\laravel-blog.loc\app\Http\Controllers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="W:\domains\laravel-blog.loc\resources\views\admin\settings" />
       <recent name="W:\domains\laravel-blog.loc\public\uploads" />
       <recent name="W:\domains\laravel-blog.loc\resources\js" />
       <recent name="W:\domains\laravel-blog.loc\public\img" />
@@ -232,10 +230,10 @@
       <screen x="0" y="0" width="1920" height="998" />
     </state>
     <state x="1039" y="458" key="#com.intellij.tools.ToolEditorDialog/0.0.1920.998@0.0.1920.998" timestamp="1611734810465" />
-    <state x="1097" y="243" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612807081775">
+    <state x="1097" y="243" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613242643473">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
-    <state x="1097" y="243" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.998@0.0.1920.998" timestamp="1612807081775" />
+    <state x="1097" y="243" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.998@0.0.1920.998" timestamp="1613242643473" />
     <state x="987" y="195" key="NewPhpClassDialog" timestamp="1612424298711">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
