@@ -30,8 +30,8 @@ class Post extends Model
     }
 
     public function comments()
-    {
-        return $this->hasMany(Comment::class);
+    {// связть поста с комментами, внешн ключ в комментах, локальный в постах
+        return $this->hasMany(Comment::class, 'post_id', 'id');
     }
 
     /*public function getComments()

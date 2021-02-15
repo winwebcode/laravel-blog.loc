@@ -20,16 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06797367-d3b1-4791-a1e8-0d936e8b41d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SettingsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Settings.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_13_164754_create_settings_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/settings/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/laravel_blog.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pages/comments/form_comment.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CommentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CommentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/comments/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/comments/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,20 +158,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/settings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="W:\domains\laravel-blog.loc\resources\views" />
-      <recent name="W:\domains\laravel-blog.loc\app\Http\Controllers" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="W:\domains\laravel-blog.loc\database" />
       <recent name="W:\domains\laravel-blog.loc\resources\views\admin\settings" />
       <recent name="W:\domains\laravel-blog.loc\public\uploads" />
       <recent name="W:\domains\laravel-blog.loc\resources\js" />
       <recent name="W:\domains\laravel-blog.loc\public\img" />
-      <recent name="W:\domains\laravel-blog.loc\resources\views\admin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="W:\domains\laravel-blog.loc\resources\views" />
+      <recent name="W:\domains\laravel-blog.loc\app\Http\Controllers" />
     </key>
   </component>
   <component name="RunManager">
@@ -196,6 +193,8 @@
       <workItem from="1610520920588" duration="178969000" />
       <workItem from="1612271584749" duration="243000" />
       <workItem from="1612271856337" duration="82429000" />
+      <workItem from="1613384094714" duration="1655000" />
+      <workItem from="1613388434111" duration="6766000" />
     </task>
     <servers />
   </component>
@@ -238,10 +237,10 @@
       <screen x="0" y="0" width="1920" height="998" />
     </state>
     <state x="987" y="195" key="NewPhpClassDialog/0.0.1920.998@0.0.1920.998" timestamp="1612424298711" />
-    <state x="1289" y="411" key="NewPhpFileDialog" timestamp="1612804505923">
+    <state x="1289" y="411" key="NewPhpFileDialog" timestamp="1613407785841">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
-    <state x="1289" y="411" key="NewPhpFileDialog/0.0.1920.998@0.0.1920.998" timestamp="1612804505923" />
+    <state x="1289" y="411" key="NewPhpFileDialog/0.0.1920.998@0.0.1920.998" timestamp="1613407785841" />
     <state x="416" y="153" key="SettingsEditor" timestamp="1612271782162">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
