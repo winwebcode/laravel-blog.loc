@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Post;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Validation\Rule;
 
 class UsersController extends Controller
@@ -13,10 +15,16 @@ class UsersController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @throws \Exception
      */
     public function index()
     {
-        $users = User::all();
+        //достаём кэшированное или кэшируем
+
+        $users = Cache::remember('allUsers', 9000, function () {
+            return User::all();
+        });
+
         return view('admin.users.index', compact('users'));
     }
 

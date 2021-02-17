@@ -15,7 +15,7 @@
                     <div class="post-content">
                         <header class="entry-header text-center text-uppercase">
                             @if($post->hasCategory())
-                                <h6><a href="{{route('categories.show', $post->category->slug)}}"> {{$post->getCategoryTitle()}}</a></h6>
+                                <h6><a href="{{route('category.show', $post->category->slug)}}"> {{$post->getCategoryTitle()}}</a></h6>
                             @else
                                 <h6>Без категории</h6>
                             @endif
