@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- favicon icon -->
-    <title>Blog</title>
+    <title>{{$seoMeta->title}}</title>
+    <meta name="description"  content="{{$seoMeta->description}}" />
+    <meta name="keywords"  content="{{$seoMeta->keywords}}" />
+
 
               <!-- common css -->
     <link rel="stylesheet" href="/css/front.css">

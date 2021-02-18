@@ -44,8 +44,6 @@ class TagsController extends Controller
         return redirect()->route('tags.index'); //
     }
 
-
-
     /**
      * Show the form for editing the specified resource.
      *

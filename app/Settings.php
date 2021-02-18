@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class Settings extends Model
 {
-    protected $fillable = ['name', 'status'];
+    protected $fillable = ['name', 'status', 'description', 'title', 'keywords'];
     protected $table = 'settings';
 
     const ON = 1;
@@ -41,6 +41,23 @@ class Settings extends Model
     {
         $this->status = Settings::OFF;
         $this->save();
+    }
+
+    public static function setMetaTagsForIndex($title = null,$description = null, $keywords = null)
+    {
+        $seoMeta = new Post();
+        $seoMeta->title = "$title";
+        $seoMeta->description = "$description";
+        $seoMeta->keywords = "$keywords";
+        return $seoMeta;
+    }
+    public function setTitleIndex()
+    {
+
+    }
+
+    public function setDescriptionIndex()
+    {
 
     }
 }

@@ -2,6 +2,7 @@
 
 @section('content')
     <!-- Content Wrapper. Contains page content -->
+
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
@@ -18,7 +19,7 @@
 
         <!-- Main content -->
         <section class="content">
-
+        @include('pages.alerts_message')
             <!-- Default box -->
             <div class="box">
                 <div class="box-header">
@@ -57,6 +58,17 @@
                         {{--</tfoot>--}}
                     </table>
                 </div>
+
+
+                <div class="box-header">
+                    <h3 class="box-title">Кэш</h3>
+                </div>
+
+                <div class="box-body">
+                    <a href="{{route('flushAllCache')}}" class="btn btn-success">Очистить весь кэш</a>
+                    <a href="{{route('flushPostsCache')}}" class="btn btn-success">Очистить кэш постов</a>
+                </div>
+
                 <!-- /.box-body -->
             </div>
             <!-- /.box -->
