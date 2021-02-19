@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 15 2021 г., 19:38
+-- Время создания: Фев 19 2021 г., 11:18
 -- Версия сервера: 10.3.13-MariaDB-log
 -- Версия PHP: 7.1.32
 
@@ -155,7 +155,7 @@ CREATE TABLE `posts` (
 INSERT INTO `posts` (`id`, `title`, `slug`, `content`, `category_id`, `user_id`, `status`, `views`, `is_featured`, `created_at`, `updated_at`, `date`, `image`, `description`, `keywords`) VALUES
 (19, '555', '555', '<p>123</p>', 1, 1, 1, 0, 0, '2021-01-31 01:18:29', '2021-02-09 00:49:11', '2020-12-30', 'Voznq6gpMo.jpeg', '<p>about 555</p>', NULL),
 (20, 'Labore explicabo enim dignissimos saepe.', 'labore-explicabo-enim-dignissimos-saepe', '<p>Et illum in reiciendis.</p>\r\n\r\n<p>Очень редкий случай, когда китайская компания не гонится за трендами и не пытается сделать максимально большой смартфон за свои деньги, а ищет баланс &mdash; и находит его, причем не забывая об эстетике. У vivo в лице V20 (и его младшего брата V20 SE) получился один из самых приятных смартфонов 2020-го &mdash; легкий, с матовой задней крышкой и дисплеем адекватных размеров. Причем прекрасно настроенным AMOLED-дисплеем. Добавим сюда еще Android 11 (и это первый смартфон на российском рынке с последним &laquo;роботом&raquo;) и лучшую как минимум в своем классе фронтальную камеру &mdash; и получим не просто прорывной для vivo смартфон, а одно из лучших предложений в ценовой категории 20-30 тысяч рублей.&nbsp;</p>', 10, 1, 0, 8354, 1, '2021-02-01 08:29:25', '2021-02-02 23:28:51', '2021-02-01', 'photo1.png', NULL, NULL),
-(21, 'Quo cumque consequatur quia accusantium qui consequatur velit dolorem.', 'quo-cumque-consequatur-quia-accusantium-qui-consequatur-velit-dolorem', '<p>Quam molestias doloremque quos quos.</p>', 10, 1, 0, 8303, 0, '2021-02-01 08:29:25', '2021-02-02 23:29:05', '2021-02-01', 'photo1.png', NULL, NULL),
+(21, 'Quo cumque consequatur quia accusantium qui consequatur velit dolorem.', 'quo-cumque-consequatur-quia-accusantium-qui-consequatur-velit-dolorem', '<p>Quam molestias doloremque quos quos.</p>', 10, 1, 0, 8303, 0, '2021-02-01 08:29:25', '2021-02-02 23:29:05', '2021-02-01', 'photo1.png', '19 febr', 'laravel, test, seo'),
 (22, 'Doloremque molestiae beatae illum numquam voluptatem sapiente.', 'doloremque-molestiae-beatae-illum-numquam-voluptatem-sapiente', 'Quibusdam cupiditate sequi vel velit esse.', 10, 1, 0, 6062, 0, '2021-02-01 08:29:25', '2021-02-01 08:29:25', '2021-02-01', 'photo1.png', NULL, NULL),
 (23, 'Libero nostrum sed voluptatibus facere voluptatibus.', 'libero-nostrum-sed-voluptatibus-facere-voluptatibus', 'Distinctio assumenda et ab quod fugiat.', 10, 1, 0, 3815, 0, '2021-02-01 08:29:25', '2021-02-01 08:29:25', '2021-02-01', 'photo1.png', NULL, NULL),
 (24, 'Sed aspernatur eum officia qui magni.', 'sed-aspernatur-eum-officia-qui-magni', 'Omnis totam quos non consequatur corrupti.', 10, 1, 0, 4397, 0, '2021-02-01 08:29:25', '2021-02-01 08:29:25', '2021-02-01', 'photo1.png', NULL, NULL),
@@ -272,7 +272,7 @@ CREATE TABLE `tags` (
 --
 
 INSERT INTO `tags` (`id`, `title`, `slug`, `created_at`, `updated_at`) VALUES
-(1, 'top', 'yop', '2021-01-25 23:48:49', '2021-01-26 00:57:59'),
+(1, 'newtop', 'yop', '2021-01-25 23:48:49', '2021-01-26 00:57:59'),
 (5, 'auto', 'auto', '2021-01-29 07:56:07', '2021-01-29 07:56:07'),
 (6, 'non', 'non', '2021-02-01 08:18:51', '2021-02-01 08:18:51'),
 (7, 'quo', 'quo', '2021-02-01 08:18:52', '2021-02-01 08:18:52'),
@@ -310,7 +310,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `is_admin`, `status`, `r
 (30, 'user60', 'qw6e@mail.com', '$2y$10$qigO1csAFqGm8RwJ4fYC.u9IMhDE2XbuLop8HAqvEA33d0KNbpQFm', 0, 0, NULL, '2021-02-04 01:58:02', '2021-02-09 04:16:05', 'aFmmgGXpvT.png', '0', NULL),
 (31, 'lamer', 'lamertrue@mail.ru', NULL, 0, 0, NULL, NULL, NULL, NULL, '0', NULL),
 (32, '123', '235325@mail.de', '$2y$10$T6zImwPCJTwaxtlQPKnbYembiyJgUR24HSUqwLVd8tuWqEMmANWDS', 0, 0, NULL, '2021-02-08 07:53:13', '2021-02-09 04:17:04', NULL, '0', NULL),
-(33, 'testuser2337', 'test2515215215213@gmail.com', '$2y$10$GUKOBtKAlrr1nsqLpP9q.OMz0UyUo4.UQyYc2AhfEGbvDSsNtYbRS', 0, 0, NULL, '2021-01-26 07:51:57', '2021-02-08 08:01:43', '23.png', '0', NULL);
+(33, 'testuser2337', 'test2515215215213@gmail.com', '$2y$10$GUKOBtKAlrr1nsqLpP9q.OMz0UyUo4.UQyYc2AhfEGbvDSsNtYbRS', 0, 0, NULL, '2021-01-26 07:51:57', '2021-02-08 08:01:43', '23.png', '0', NULL),
+(777, 'ff', 'fff', NULL, 0, 0, NULL, NULL, NULL, NULL, '0', NULL);
 
 --
 -- Индексы сохранённых таблиц
@@ -396,7 +397,7 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT для таблицы `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT для таблицы `posts`
@@ -432,7 +433,7 @@ ALTER TABLE `tags`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=778;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
