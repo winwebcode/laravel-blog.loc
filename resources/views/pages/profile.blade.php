@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('service_layout_not_seo')
 
 @section('content')
 

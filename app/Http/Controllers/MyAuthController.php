@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Settings;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,6 +16,7 @@ class MyAuthController extends Controller
 
     public function register(Request $request)
     {
+        $seoMeta = Settings::setMetaTagsForIndex("Register", "", "");
         //валидируем данные, создаём пользователя, редирект на форму логина
         $this->validate($request, [
             'name' => 'required|unique:users',
@@ -30,7 +32,8 @@ class MyAuthController extends Controller
 
     public function loginForm()
     {
-        return view('pages.login');
+        $seoMeta = Settings::setMetaTagsForIndex("Login", "Login", "Login");
+        return view('pages.login', compact('seoMeta'));
     }
 
     public function login(Request $request)

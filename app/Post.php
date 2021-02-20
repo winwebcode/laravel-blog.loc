@@ -113,7 +113,6 @@ class Post extends Model
         $post = new static;
         $post->fill($fields);
         $post->generateDescription();
-
         $post->user_id = Auth::user()->user_id;
         $post->save();
 

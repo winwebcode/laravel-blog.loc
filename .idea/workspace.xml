@@ -20,7 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06797367-d3b1-4791-a1e8-0d936e8b41d3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/service_layout_not_seo.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MyAuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MyAuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_02_17_124624_create_cache_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/register.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,20 +159,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/database" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel-guestbook.loc" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="W:\domains\laravel-blog.loc\resources\views" />
+      <recent name="W:\domains\laravel-blog.loc\app\Http\Controllers" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="W:\domains\laravel-blog.loc\database" />
       <recent name="W:\domains\laravel-blog.loc\resources\views\admin\settings" />
       <recent name="W:\domains\laravel-blog.loc\public\uploads" />
       <recent name="W:\domains\laravel-blog.loc\resources\js" />
       <recent name="W:\domains\laravel-blog.loc\public\img" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="W:\domains\laravel-blog.loc\resources\views" />
-      <recent name="W:\domains\laravel-blog.loc\app\Http\Controllers" />
     </key>
   </component>
   <component name="RunManager">
@@ -188,7 +196,9 @@
       <workItem from="1612271584749" duration="243000" />
       <workItem from="1612271856337" duration="82429000" />
       <workItem from="1613384094714" duration="1655000" />
-      <workItem from="1613388434111" duration="33789000" />
+      <workItem from="1613388434111" duration="36357000" />
+      <workItem from="1613735350900" duration="2199000" />
+      <workItem from="1613744543719" duration="28928000" />
     </task>
     <servers />
   </component>
@@ -219,22 +229,30 @@
       <screen x="0" y="0" width="1920" height="998" />
     </state>
     <state x="697" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.998@0.0.1920.998" timestamp="1612711615622" />
+    <state x="690" y="245" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613846651820">
+      <screen x="0" y="0" width="1920" height="998" />
+    </state>
+    <state x="690" y="245" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.998@0.0.1920.998" timestamp="1613846651820" />
     <state x="1039" y="458" key="#com.intellij.tools.ToolEditorDialog" timestamp="1611734810465">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
     <state x="1039" y="458" key="#com.intellij.tools.ToolEditorDialog/0.0.1920.998@0.0.1920.998" timestamp="1611734810465" />
-    <state x="1097" y="243" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613578175711">
+    <state x="1097" y="243" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1613846252183">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
-    <state x="1097" y="243" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.998@0.0.1920.998" timestamp="1613578175711" />
+    <state x="1097" y="243" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.998@0.0.1920.998" timestamp="1613846252183" />
+    <state x="770" y="237" key="FileChooserDialogImpl" timestamp="1613745124164">
+      <screen x="0" y="0" width="1920" height="998" />
+    </state>
+    <state x="770" y="237" key="FileChooserDialogImpl/0.0.1920.998@0.0.1920.998" timestamp="1613745124164" />
     <state x="987" y="195" key="NewPhpClassDialog" timestamp="1612424298711">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
     <state x="987" y="195" key="NewPhpClassDialog/0.0.1920.998@0.0.1920.998" timestamp="1612424298711" />
-    <state x="1289" y="411" key="NewPhpFileDialog" timestamp="1613407785841">
+    <state x="1289" y="411" key="NewPhpFileDialog" timestamp="1613846905318">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
-    <state x="1289" y="411" key="NewPhpFileDialog/0.0.1920.998@0.0.1920.998" timestamp="1613407785841" />
+    <state x="1289" y="411" key="NewPhpFileDialog/0.0.1920.998@0.0.1920.998" timestamp="1613846905318" />
     <state x="416" y="153" key="SettingsEditor" timestamp="1612271782162">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
@@ -243,10 +261,10 @@
       <screen x="0" y="0" width="1920" height="998" />
     </state>
     <state x="769" y="412" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.998@0.0.1920.998" timestamp="1611642718649" />
-    <state x="937" y="260" width="744" height="558" key="find.popup" timestamp="1613581540744">
+    <state x="939" y="267" width="744" height="624" key="find.popup" timestamp="1613841551084">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
-    <state x="937" y="260" width="744" height="558" key="find.popup/0.0.1920.998@0.0.1920.998" timestamp="1613581540744" />
+    <state x="939" y="267" width="744" height="624" key="find.popup/0.0.1920.998@0.0.1920.998" timestamp="1613841551084" />
     <state x="943" y="236" key="run.anything.popup" timestamp="1611656106394">
       <screen x="0" y="0" width="1920" height="998" />
     </state>
