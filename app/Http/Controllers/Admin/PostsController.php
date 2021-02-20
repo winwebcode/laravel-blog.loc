@@ -22,7 +22,7 @@ class PostsController extends Controller
 
         }
         dd($post->category);*/
-        return view('admin.posts.index', compact('posts', 'catname'));
+        return view('admin.posts.index', compact('posts'));
     }
 
     /**
