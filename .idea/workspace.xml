@@ -20,8 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06797367-d3b1-4791-a1e8-0d936e8b41d3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Advertisment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdvertisementController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_24_164901_add_advertisment_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/advertisment/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/user2-160x160.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/user2-160x160.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,21 +161,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel-guestbook.loc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="W:\domains\laravel-blog.loc\resources\views" />
-      <recent name="W:\domains\laravel-blog.loc\app\Http\Controllers" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="W:\domains\laravel-blog.loc\public\img" />
+      <recent name="W:\domains\laravel-blog.loc\resources\views\admin\advertisment" />
       <recent name="W:\domains\laravel-blog.loc\database" />
       <recent name="W:\domains\laravel-blog.loc\resources\views\admin\settings" />
       <recent name="W:\domains\laravel-blog.loc\public\uploads" />
-      <recent name="W:\domains\laravel-blog.loc\resources\js" />
-      <recent name="W:\domains\laravel-blog.loc\public\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="W:\domains\laravel-blog.loc\resources\views" />
+      <recent name="W:\domains\laravel-blog.loc\app\Http\Controllers" />
     </key>
   </component>
   <component name="RunManager">
@@ -193,7 +201,7 @@
       <workItem from="1613388434111" duration="36357000" />
       <workItem from="1613735350900" duration="2199000" />
       <workItem from="1613744543719" duration="36113000" />
-      <workItem from="1614024258129" duration="397000" />
+      <workItem from="1614024258129" duration="7673000" />
     </task>
     <servers />
   </component>

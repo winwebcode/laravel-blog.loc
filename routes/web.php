@@ -60,6 +60,7 @@ Route::group(['prefix' => 'admin', 'namespace'=> 'Admin', 'middleware' => 'admin
     Route::get('/settings/{id}', 'SettingsController@tumbler')->name('settings.tumbler');
     Route::get('/flushcache', 'SettingsController@clearAllCache')->name('flushAllCache');
     Route::get('/flushpostscache', 'SettingsController@clearPostsCache')->name('flushPostsCache');
+    Route::resource('/advertisement', 'AdvertisementController');
 
 });
 

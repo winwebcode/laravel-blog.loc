@@ -51,13 +51,4 @@ class Settings extends Model
         $seoMeta->keywords = "$keywords";
         return $seoMeta;
     }
-    public function setTitleIndex()
-    {
-
-    }
-
-    public function setDescriptionIndex()
-    {
-
-    }
 }
