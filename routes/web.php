@@ -61,6 +61,7 @@ Route::group(['prefix' => 'admin', 'namespace'=> 'Admin', 'middleware' => 'admin
     Route::get('/flushcache', 'SettingsController@clearAllCache')->name('flushAllCache');
     Route::get('/flushpostscache', 'SettingsController@clearPostsCache')->name('flushPostsCache');
     Route::resource('/advertisement', 'AdvertisementController');
+    Route::get('/advertisement/{edit}', 'AdvertisementController@edit');
 
 });
 

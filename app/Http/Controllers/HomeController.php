@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Advertisment;
 use App\Category;
 use App\Post;
 use App\Settings;
@@ -31,6 +32,11 @@ class HomeController extends Controller
         $seo = Post::where('slug', $slug)->firstOrFail();
         $seoMeta = Settings::setMetaTagsForIndex("$seo->title", "$seo->description", "$seo->keywords");
 
+        //Advertisement
+        $adAfterTitle = Advertisment::where('name', '=','afterTitle')->first();
+        $adEndOfPost = Advertisment::where('name', '=','endOfPost')->first();
+
+
         $post = Cache::remember($slug, 86400, function () use ($slug)  {
             return Post::where('slug', $slug)->firstOrFail();
         });
@@ -41,7 +47,10 @@ class HomeController extends Controller
 
         return view('pages.show', compact('post',
             'commentsStatus',
-            'seoMeta'));
+            'seoMeta',
+        'adEndOfPost',
+        'adAfterTitle'
+        ));
     }
 
     public function tag($slug)

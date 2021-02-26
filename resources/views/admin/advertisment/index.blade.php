@@ -13,7 +13,7 @@
 
         <!-- Main content -->
         <section class="content">
-        {{Form::open(['route'=>['advertisement.store'], 'method' => 'post'])}}
+
 
 
             <!-- Default box -->
@@ -24,30 +24,33 @@
                     <h3 class="box-title">Обновляем рекламные коды</h3>
                     @include('admin.errors')
                 </div>
-                <div class="box-body">
 
-                    @foreach($ads as $ad)
+                @foreach($ads as $ad)
+                <div class="box-body">
+                {{Form::open(['route'=>['advertisement.edit', $ad->id], 'method' => 'get'])}}
+
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Заголовок поста</label>
-                            <textarea name="{{$ad->name}}" id="" cols="30" rows="10" class="form-control">{{$ad->code}}</textarea>
+                            <label name="{{$ad->label}}" for="exampleInputEmail1">{{$ad->label}}</label>
+                            <textarea name="code" id="" cols="30" rows="10" class="form-control">{!!$ad->code!!}</textarea>
                         </div>
                     </div>
 
-                    @endforeach
+
                 </div>
 
                 <!-- /.box-body -->
                 <div class="box-footer">
                     <button class="btn btn-warning pull-right">Изменить</button>
                 </div>
-
+                {{Form::close()}}
+                @endforeach
                 <!-- /.box-footer-->
             </div>
 
             <!-- /.box -->
 
-        {{Form::close()}}
+
         </section>
         <!-- /.content -->
     </div>

@@ -123,9 +123,7 @@
             <div class="col-md-4">
                 <aside class="footer-widget">
                     <div class="about-img"><img src="/images/footer-logo.png" alt=""></div>
-                    <div class="about-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed voluptua. At vero eos et
-                        accusam et justo duo dlores et ea rebum magna text ar koto din.
+                    <div class="about-content">Mini CMS on Laravel
                     </div>
                     <div class="address">
                         <h4 class="text-uppercase">contact Info</h4>
@@ -134,7 +132,7 @@
 
                         <p> Phone: +123 456 78900</p>
 
-                        <p>rahim@marlindev.ru</p>
+                        <p>email@mail.com</p>
                     </div>
                 </aside>
             </div>

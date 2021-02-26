@@ -13,6 +13,8 @@
                         <img src="{{$post->getImage()}}" alt="">
                     </div>
                     <div class="post-content">
+
+
                         <header class="entry-header text-center text-uppercase">
                             @if($post->hasCategory())
                                 <h6><a href="{{route('category.show', $post->category->slug)}}"> {{$post->getCategoryTitle()}}</a></h6>
@@ -22,11 +24,17 @@
 
                             <h1 class="entry-title">{{$post->title}}</h1>
 
+                                {!!$adAfterTitle->code!!}
+
 
                         </header>
                         <div class="entry-content">
                             {!!$post->content!!}
                         </div>
+
+                            {!!$adEndOfPost->code!!}
+
+
                         <div class="decoration">
                             @foreach($post->tags as $tag)
                             <a href="{{route('tag.show', $tag->slug)}}" class="btn btn-default">{{$tag->title}}</a>
@@ -102,11 +110,14 @@
                                 <img src="{{$post->getImage()}}" alt="">
 
                                 <p>{{$item->title}}</p>
+
                             </a>
                         </div>
                         @endforeach
                     </div>
                 </div><!--related post carousel-->
+
+
                 @include('pages.alerts_message')
 
                 @if(!$post->comments->isEmpty())
@@ -146,6 +157,7 @@
         </div>
     </div>
 </div>
+
 <!-- end main content-->
 
 @endsection
