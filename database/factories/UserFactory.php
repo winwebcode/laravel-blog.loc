@@ -19,7 +19,7 @@ use Faker\Generator as Faker;
 | model instances for testing / seeding your application's database.
 |
 Для запуска в консоли php artisan tinker
-далее factory(App\Classname::class, 5)->create();
+далее factory(App\Classname::class, 5)->create(); напр, factory(App\Post::class, 5)->create();
 */
 
 
@@ -39,7 +39,8 @@ $factory->define(User::class, function (Faker $faker) {
 $factory->define(Post::class, function (Faker $faker) {
     return [
         'title' => $faker->sentence,
-        'content' => $faker->sentence,
+        //'content' => $faker->sentence,
+        'content' => $faker->text(2800),
         'image' => 'photo1.png',
         'date' => '01/02/21',
         'views' => $faker->numberBetween(0, 10000),
