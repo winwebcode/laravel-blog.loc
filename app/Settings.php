@@ -43,12 +43,12 @@ class Settings extends Model
         $this->save();
     }
 
-    public static function setMetaTagsForIndex($title = null,$description = null, $keywords = null)
+    /*public static function setMetaTagsForIndex($title = null,$description = null, $keywords = null)
     {
         $seoMeta = new Post();
         $seoMeta->title = "$title";
         $seoMeta->description = "$description";
         $seoMeta->keywords = "$keywords";
         return $seoMeta;
-    }
+    }*/
 }

@@ -15,8 +15,12 @@ class HomeController extends Controller
 
     public function index()
     {
-        $seoMeta = Settings::setMetaTagsForIndex("CMS on Laravel 2021", "CMS on Laravel 2021", "CMS on Laravel 2021");
-        // кэш 4 часа
+        //seo tags for homepage
+        $seoMeta = [
+            'title' => 'CMS on Laravel 2021',
+            'description' => 'CMS on Laravel 2021',
+            'keywords' => 'CMS on Laravel 2021'
+        ];
         $posts = Post::where('status', '=', Post::IS_PUBLIC)->paginate(2);
 
         return view('pages.index', compact(
@@ -41,7 +45,6 @@ class HomeController extends Controller
 
         return view('pages.show', compact('post',
             'commentsStatus',
-            //'seoMeta',
         'adEndOfPost',
         'adAfterTitle'
         ));
@@ -62,8 +65,8 @@ class HomeController extends Controller
         $category = Cache::remember($slug, 86400, function () use ($slug)  {
             return Category::where('slug', $slug)->firstOrFail();
         });
-
         $posts = $category->posts()->paginate(2);
+
         return view('pages.list', compact('posts'));
     }
 }
