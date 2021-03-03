@@ -16,20 +16,12 @@ class SettingsController extends Controller
         return view('admin.settings.index', compact('settings'));
     }
 
-
     public function tumbler($id)
     {
         $settings = Settings::find($id);
         $settings->tumblerSettings();
 
         return redirect()->route('settings');
-    }
-
-    public function metaTagsForIndex(Request $request)
-    {
-        $settings = Settings::all();
-        $settings->setMetaTagsForIndex($request->all());
-        return redirect()->back()->with('status', 'Данные обновлены');
     }
 
     /*cache*/
@@ -43,5 +35,17 @@ class SettingsController extends Controller
     {
         Cache::forget('allPosts');
         return redirect()->back()->with('status', 'Кэш записей очищен');
+    }
+
+    public function seo(Request $request)
+    {
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required',
+            'keywords' => 'required'
+        ]);
+        $seoTags = Settings::where('name', '=', 'seoMeta')->firstOrFail();
+        $seoTags->seoMetaTagsSet($request->all());
+        return redirect()->back()->with('status', 'Данные мета тегов обновлены!');
     }
 }

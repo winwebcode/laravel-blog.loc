@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{$seoMeta['title']}}</title>
-    <meta name="description"  content="{{$seoMeta['title']}}" />
-    <meta name="keywords"  content="{{$seoMeta['title']}}" />
+    <title>{{$seoMeta['0']}}</title>
+    <meta name="description"  content="{{$seoMeta['1']}}" />
+    <meta name="keywords"  content="{{$seoMeta['2']}}" />
     <!-- favicon icon -->
 
 
@@ -243,6 +243,6 @@
 </footer>
 <!-- js files -->
 <script type="text/javascript" src="/js/front.js"></script>
-
+@include('advertise.end_before_close_body')
 </body>
 </html>

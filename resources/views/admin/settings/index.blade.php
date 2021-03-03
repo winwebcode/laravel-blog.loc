@@ -69,6 +69,22 @@
                     <a href="{{route('flushPostsCache')}}" class="btn btn-success">Очистить кэш постов</a>
                 </div>
 
+            {{Form::open(['route'=>['settings.seo'], 'method'=>'post'])}}
+<script>
+
+    CKEDITOR.config.templates_replaceContent = false;
+</script>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Ключевые слова</label><br>
+                    <input type="title" class="form-control" id="exampleInputEmail1" placeholder="title" value="" name="title" ><br>
+                    <textarea name="description" id="" cols="30" rows="10" class="form-control" placeholder="description"></textarea><br>
+                    <textarea name="keywords" id="" cols="30" rows="10" class="form-control" placeholder="keywords"></textarea><br>
+                    <div class="box-footer">
+                        <button class="btn btn-warning pull-right">Изменить</button>
+                    </div>
+                </div>
+            {{Form::close()}}
+
                 <!-- /.box-body -->
             </div>
             <!-- /.box -->

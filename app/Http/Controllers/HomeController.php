@@ -16,11 +16,9 @@ class HomeController extends Controller
     public function index()
     {
         //seo tags for homepage
-        $seoMeta = [
-            'title' => 'CMS on Laravel 2021',
-            'description' => 'CMS on Laravel 2021',
-            'keywords' => 'CMS on Laravel 2021'
-        ];
+        $seoMeta = Settings::getSeoForIndex();
+
+        //paginate работает только с where
         $posts = Post::where('status', '=', Post::IS_PUBLIC)->paginate(2);
 
         return view('pages.index', compact(

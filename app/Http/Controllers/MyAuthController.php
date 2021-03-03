@@ -16,7 +16,6 @@ class MyAuthController extends Controller
 
     public function register(Request $request)
     {
-        $seoMeta = Settings::setMetaTagsForIndex("Register", "", "");
         //валидируем данные, создаём пользователя, редирект на форму логина
         $this->validate($request, [
             'name' => 'required|unique:users',
@@ -32,8 +31,7 @@ class MyAuthController extends Controller
 
     public function loginForm()
     {
-        $seoMeta = Settings::setMetaTagsForIndex("Login", "Login", "Login");
-        return view('pages.login', compact('seoMeta'));
+        return view('pages.login');
     }
 
     public function login(Request $request)

@@ -243,6 +243,6 @@
 </footer>
 <!-- js files -->
 <script type="text/javascript" src="/js/front.js"></script>
-
+@include('advertise.end_before_close_body')
 </body>
 </html>

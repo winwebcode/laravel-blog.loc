@@ -58,6 +58,7 @@ Route::group(['prefix' => 'admin', 'namespace'=> 'Admin', 'middleware' => 'admin
     Route::get('/subscribers-clear', 'AdmSubscribeController@clear')->name('subscribers.clear');
     Route::get('/settings', 'SettingsController@showSettings')->name('settings');
     Route::get('/settings/{id}', 'SettingsController@tumbler')->name('settings.tumbler');
+    Route::post('/settingsseo', 'SettingsController@seo')->name('settings.seo');;
     Route::get('/flushcache', 'SettingsController@clearAllCache')->name('flushAllCache');
     Route::get('/flushpostscache', 'SettingsController@clearPostsCache')->name('flushPostsCache');
     Route::resource('/advertisement', 'AdvertisementController');

@@ -24,6 +24,13 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        DB::table('users')->insertOrIgnore([
+            'name' => 'admin',
+            'email' => 'admin@mail.ie',
+            'password' => '$2y$10$WWidwaoWbcf/E374nRYvN.rjgJEHAYGjRWEdxVO5lZtXb1eZHn8tm',
+            'is_admin' => '1'
+        ]);
     }
 
     /**

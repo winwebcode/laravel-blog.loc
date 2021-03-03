@@ -43,12 +43,24 @@ class Settings extends Model
         $this->save();
     }
 
-    /*public static function setMetaTagsForIndex($title = null,$description = null, $keywords = null)
+    public function seoMetaTagsSet($request)
     {
-        $seoMeta = new Post();
-        $seoMeta->title = "$title";
-        $seoMeta->description = "$description";
-        $seoMeta->keywords = "$keywords";
+        unset($request['_token']);
+        $request = implode(",", $request);
+        $request = strip_tags(htmlspecialchars_decode($request));
+        $this->data = $request;
+        $this->save();
+    }
+
+    public static function getSeoForIndex()
+    {
+        $seoSettings = Settings::where('name', 'seoMeta')->get();
+        //$seoMeta = explode(",", $seoMeta);
+        foreach ($seoSettings as $seo) {
+            $seoMeta = explode(",", $seo->data);
+        }
+
         return $seoMeta;
-    }*/
+    }
+
 }
