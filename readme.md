@@ -1,4 +1,5 @@
-CMS на Laravel
+CMS на Laravel 5.8
+
 Логин администратора / Пароль администратора: admin@mail.ie / admin
  
 Что реализовано
@@ -21,6 +22,20 @@ CRUD для пользователей / комментариев / катего
 
 Дамп базы в директории /database
 
+***********************
+Для перехода на Laravel 8.x
+
+1. прописать в /app/Providers/AppServiceProvider.php 
+
+Schema::defaultStringLength(191);
+
+2. прописать в app/Providers/RouteServiceProvider.php
+
+ protected $namespace = 'App\Http\Controllers';
+
+3. В blade шаблонизаторе пути вида не admin.layout , а admin/layout
+
+**********
 
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
